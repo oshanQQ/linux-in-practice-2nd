@@ -732,7 +732,12 @@ read(3, "", 4096)                       = 0
 brk(0x12d8000)                          = 0x12d8000
 brk(0x12d6000)                          = 0x12d6000
 close(3)                                = 0
+
+# ===========================================
+# writeシステムコールで、メッセージを画面に表示する。
 write(1, "hello world\n", 12)           = 12
+# ===========================================
+
 brk(0x12d4000)                          = 0x12d4000
 rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa44e3b5090}, {sa_handler=0x62b020, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7fa44e3b5090}, 8) = 0
 brk(0x12d2000)                          = 0x12d2000
